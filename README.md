@@ -20,7 +20,7 @@ For the sake of simplicity, we will only target individual functions, so you onl
 Handling the following will give you additional points
 
 - tertiary expressions in predicates, e.g., `if True if x == 42 else False:` or `if 4 if x > 0 else 2 > 3:`
-- the `in` operators for collections, e.gl, `if x in y:` in which `y` is a set or a list
+- the `in` operators for collections, e.g., `if x in y:` in which `y` is a set or a list
 - implement Alternating Variable Method (AVM) as the solver
 
 ## Algorithms
@@ -32,6 +32,8 @@ $ python sbst.py examples/example1.py
 $ cd examples
 $ pytest
 ```
+
+The generated PyTest test code should be named as: `test_` + [target function name] + `.py`. For example, the output for a target file `foo.py` should be `test_foo.py`. The generated test functions should follow the following naming convention: `test_` + [target function name] + `_` + [index number]. For example, the 3rd PyTest test function for the target function named `bar` should be called: `test_bar_3`. 
 
 If you want to check the coverage of your test cases, use `coverage.py`:
 
