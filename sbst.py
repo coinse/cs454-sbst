@@ -16,9 +16,16 @@ if __name__ == "__main__":
 
     """
     TODO: generate a test suite for the target python file
+    You can modify the code below to generate a test suite for any target python file in the examples folder.
     """
 
-    test_file_content = '"""generate test file content here"""'
+    target_module = os.path.basename(args.target).removesuffix(".py")
+
+    test_file_content = f'''
+import {target_module}
+def test_sample():
+    {target_module}.example_1(1, 1, 1)
+    '''.strip()
     test_file_name = os.path.join(os.path.dirname(args.target), "test_" + os.path.basename(args.target))
     with open(test_file_name, 'w') as f:
         f.write(test_file_content)
