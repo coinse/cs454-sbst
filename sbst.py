@@ -24,7 +24,7 @@ if __name__ == "__main__":
     test_file_content = f'''
 import {target_module}
 def test_sample():
-    {target_module}.example_1(1, 1, 1)
+    {target_module}.foo(1, 1)
     '''.strip()
     test_file_name = os.path.join(os.path.dirname(args.target), "test_" + os.path.basename(args.target))
     with open(test_file_name, 'w') as f:
