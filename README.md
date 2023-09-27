@@ -21,7 +21,7 @@ Handling the following will give you additional points
 
 - tertiary expressions in predicates, e.g., `if True if x == 42 else False:` or `if 4 if x > 0 else 2 > 3:`
 - the `in` operators for collections, e.g., `if x in y:` in which `y` is a set or a list
-- implement Alternating Variable Method (AVM) as the solver
+- handle the match-case syntax([spec](https://peps.python.org/pep-0634/) and [tutorial](https://peps.python.org/pep-0636/)), newly introduced in Python 3.10, for branch coverage
 
 ## Algorithms
 
