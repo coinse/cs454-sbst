@@ -1,5 +1,5 @@
 def collection(a: int, b: int, c: int)->bool:
-	if x in [42, 3817, 1038472]:
+	if a in [42, 3817, 1038472]:
 		if b > 0 and b < 100:
 			if c in set([33, 66, 99]):
 				return True
