@@ -50,3 +50,11 @@ test_example1.py       3      0   100%
 TOTAL                 11      2    82%
 $
 ```
+
+## Report
+
+Write, and commit a simple report detailing your implementations, and include it as a PDF file in the repository. In particular, try to discuss the following point:
+
+- What was your general approach towards instrumentation?
+- How did you compute approach level?
+- Is there anything extra to the assignment that you have done? Bonus points, or even beyond those?
