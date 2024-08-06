@@ -6,7 +6,7 @@ The aim of this assignment is to implement search based test input generation te
 
 To complete the basic goal of this assignment, your test data generation technique should be able to achieve branch coverage against a Python program written using the following:
 
-- variables of type `int`
+- variables of type `int`, as well as arithmetic operators
 - `if` statements
 - `for` and `while` loops
 - comparison operators, `<`, `>`, `<=`, `>=`, `==`, and `!=`
@@ -45,18 +45,19 @@ If you want to check the coverage of your test cases, use `coverage.py`:
 ```
 $ pip install coverage
 $ pip install pytest
-$ coverage run -m pytest
+$ coverage run -m pytest run --branch test_example1.py
 $ coverage report
-Name               Stmts   Miss  Cover   Missing
-------------------------------------------------
-example1.py            8      2    75%   7-9
-test_example1.py       3      0   100%
-------------------------------------------------
-TOTAL                 11      2    82%
+python -m coverage report
+Name               Stmts   Miss Branch BrPart  Cover
+----------------------------------------------------
+example1.py           14     12      8      0     9%
+test_example1.py       3      1      0      0    67%
+----------------------------------------------------
+TOTAL                 17     13      8      0    16%
 $
 ```
 
-Note that some branches may be unreachable
+Note that some branches may be unreachable. Since code reachability is undecidable, you should bail out once the optimization fails to cover a branch after a fixed number of tries.
 
 ## Bonus Goal
 
