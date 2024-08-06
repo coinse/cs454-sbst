@@ -25,7 +25,7 @@ Handling the following will give you additional points
 
 ## Algorithms
 
-Choose either one of Hill Climbing or Genetic Algorithm (GA). Name your tool as `sbst.py`. Your tool should accept a path to a Python file (`.py`) as input, and generate a unit test file that can be executed using PyTest, in the same directory as that of the target Python file. Consider the following example:
+First, implement hill climbing algorithm for the task. Name your tool as `sbst.py`. Your tool should accept a path to a Python file (`.py`) as input, and generate a unit test file that can be executed using PyTest, in the same directory as that of the target Python file. Consider the following example:
 
 ```
 $ python sbst.py examples/example1.py
@@ -51,10 +51,19 @@ TOTAL                 11      2    82%
 $
 ```
 
+## Bonus Goal
+
+Implement one or more additional local search algorithms from below, and show that they are more efficient than hill climbing. Your report should clearly show that the additional algorithm outperforms the hill climbing algorithm you implemented.
+
+- Simulated Annealing
+- Alternating Variable Method
+- Tabu Search
+
 ## Report
 
 Write, and commit a simple report detailing your implementations, and include it as a PDF file in the repository. In particular, try to discuss the following point:
 
 - What was your general approach towards instrumentation?
 - How did you compute approach level?
+- How many fitness evaluations does your algorithm require to achieve the reported coverage?
 - Is there anything extra to the assignment that you have done? Bonus points, or even beyond those?
