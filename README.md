@@ -1,10 +1,10 @@
-# CS454 Search Based Test Input Generation
+# CS454 Assignment 1: Search Based Test Input Generation
 
 The aim of this assignment is to implement search based test input generation technique for a subset of Python. To achieve this, you need to first instrument the target `.py` file, and then generate inputs for functions in the file in the format of pytest unit test cases, in such a way that they achieve the highest statement coverage possible. To measure statement coverage, we will use [`coverage.py`](https://coverage.readthedocs.io/en/7.3.1/). 
 
 ## Target Subset of Python
 
-To complete the basic goal of this assignment, your test data generation technique should be able to achieve coverage against a Python program written using the following:
+To complete the basic goal of this assignment, your test data generation technique should be able to achieve branch coverage against a Python program written using the following:
 
 - variables of type `int`
 - `if` statements
@@ -15,7 +15,12 @@ To complete the basic goal of this assignment, your test data generation techniq
 
 For the sake of simplicity, we will only target individual functions, so you only need to consider function arguments as inputs. All input variables will be of type `int`.
 
-### Bonus Targets
+## Required Stages
+
+1. You should instrument the target program (i.e., `example1.py`, etc) so that executions with any input will leave enough information for you to compute the fitness function. Additionally, you should identify which branches are in the target program, so that you can aim each branch one by one. Note that it is more elegant to do the instrumentation in memory, instead of writing a instrumented file to the disk.
+2. Once you instrument the target, you can measure fitness for a specific branch whenever you execute the target function with arbitrary input. Then you can connect this to the search algorithm.
+
+## Bonus Targets
 
 Handling the following will give you additional points
 
@@ -50,6 +55,8 @@ test_example1.py       3      0   100%
 TOTAL                 11      2    82%
 $
 ```
+
+Note that some branches may be unreachable
 
 ## Bonus Goal
 
